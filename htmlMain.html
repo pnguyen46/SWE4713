@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
   font-family: Arial, Helvetica, sans-serif;
   background-repeat: no-repeat;
   background-position: top center;
@@ -90,7 +91,7 @@ span.psw {
     background-color: rgb(255,255,255);
     margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
     border: 1px solid #888;
-    width: 40%;
+    width: 55%;
 }
 
 /* The Close Button (x) */
@@ -138,50 +139,53 @@ span.psw {
 </style>
 </head>
 <meta name="theme-color" content="#0001ff" />
-<body>
-<h2>Welcome to AccuAccount</h2>
-<center>
-<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
-</center>
-<div id="id01" class="modal">
 
-  <form class="modal-content animate" action="/action_page.php">
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <img src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX26771420.jpg" alt="Image Broken Oops" class="avatar">
+<body>
+  <h2>Welcome to AccuAccount</h2>
+  <center>
+    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+    <button style="width:auto;">New User</button>
+  </center>
+  <div id="id01" class="modal">
+
+    <form class="modal-content animate" action="/action_page.php">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <img src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX26771420.jpg" alt="Image Broken Oops" class="avatar">
     </div>
 
-    <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
+        <div class="container">
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
 
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
 
-      <button type="submit">Login</button>
-      <label>
+          <button type="submit">Login</button>
+          <label>
         <input type="checkbox" checked="checked" name="remember"> Remember me
       </label>
-    </div>
+        </div>
 
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
-    </div>
-  </form>
-</div>
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+          <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+    </form>
+  </div>
 
-<script>
-// Get the modal
-var modal = document.getElementById('id01');
+  <script>
+    // Get the modal
+    var modal = document.getElementById('id01');
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
         modal.style.display = "none";
+      }
     }
-}
-</script>
+  </script>
 
 </body>
+
 </html>
